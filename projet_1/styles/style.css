@@ -1,7 +1,12 @@
-nav a { 
-	padding: 20px;
-	margin-left: 10px;
-	margin-right: 10px;
+nav .nav-underline li a{
+  font-family: "Segoe UI", sans-serif;
+  color: black;
+  margin-left: 10px;
+  margin-top: 5px;
+ }
+
+nav .nav-underline li a:hover {
+  color: #702963
 }
 
 .bookBtn {
@@ -16,5 +21,14 @@ nav a {
   	text-decoration: none;
   	display: inline-block;
   	font-size: 16px;
+}
+
+.bookBtn:hover {
+	background-color: #AA336A;
+}
+
+.collapse navbar-collapse:active {
+    color:white;
+    font-size: 20px;
 }
 
