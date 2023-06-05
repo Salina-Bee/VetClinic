@@ -3,12 +3,13 @@ nav a {
 	margin-left: 10px;
 	margin-right: 10px;
 }
+
 .bookBtn {
 	background-color: #5D3FD3; /* iris */
 	color: white;
     border: none;
     margin-left: 10px;
-	margin-right: 20px;
+	margin-right: 10px;
 	padding: 15px 20px;
 	border-radius: 8px;
   	text-align: center;
@@ -16,3 +17,4 @@ nav a {
   	display: inline-block;
   	font-size: 16px;
 }
+
