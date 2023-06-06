@@ -16,30 +16,34 @@
 	<body>
 		
 		<!--Navigation Bar-->
-		<nav class="nav" style="background-color:#C3B1E1">
+		<nav class="navbar navbar-expand-lg" style="background-color:#C3B1E1">
+			<div class="container-fluid">
 			<a class="navbar-brand" href="#">
 				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpMyzTUVVUJT-vMUM33oS6YCDjSh8IPwiUyg&usqp=CAU" alt="PLACEHOLDER LOGO" width="45" height="45">
 				&nbsp&nbspSilverthorn Veterinary Clinic
 			</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
 		  </button>
-	        <ul class="nav nav-underline extra">
+		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	        <ul class="nav nav-underline ms-auto ">
 	            <li class="nav-item">
-	            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+	            <a class="nav-link" href="index.html">Home</a>
 	            </li>
 	            <li class="nav-item">
 	            <a class="nav-link" href="services.html">Services</a>
 	            </li>
 	            <li class="nav-item">
-	            <a class="nav-link" href="team.html">Our Team</a>
+	            <a class="nav-link">Our Team</a>
 	            </li>
 	            <li class="nav-item">
 	            <a class="nav-link" href="testimonials.html">Testimonials</a>
 	            </li>
+	            <li class="nav-item">
+	            <a href="booking.html" aria-current="page"><button id="BookBtn" type="button" class="bookBtn">Book Now</button></a>
+	            </li>
 	        </ul>
-	       <form class="form-inline">
-			    <a href="booking.html"><button id="BookBtn" type="button" class="bookBtn">Book Now</button></a>
-		  </form>
-		</nav>
+	      </div>
 
 
 	</body>
