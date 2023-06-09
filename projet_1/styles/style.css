@@ -95,10 +95,29 @@ h1, h2, h3, h4, h5, h6 {
 	font-size:100%;
 }
 
-input[type=text], input[type=email], input[type=checkbox] {
+input[type=text], input[type=email], input[type=checkbox], input[type=date] {
 	border-color: #A58CB3;
 }
 
+input[type=date] {
+	max-width: fit-content;
+}
+
+
+.form-select {
+	border-color: #A58CB3;
+	max-width: fit-content;
+	
+}
+
+select:invalid {
+	color:gray;
+}
+
+.input-group-text {
+	background-color: #eedff7;
+	border-color: #A58CB3;
+}
 
 nav {
   	font-weight: bold;
