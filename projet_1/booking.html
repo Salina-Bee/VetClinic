@@ -47,8 +47,53 @@
 	      </div>
 		</nav>
 
-		<div class="container-fluid">
+		<div class="container">
 		   	<h2 style="text-align: center">Book an Appointment</h2>
+
+		   	<p><br>Please fill in the form below to book an appointment.</p>
+		   	<form action="#">
+		   		<h4>Personal Information</h4>
+		   		<div class="row">
+				   <div class="col-sm-4">
+				   	  <label for="firstName" class="form-label">First Name</label>
+				      <input id="firstName" type="text" class="form-control" placeholder="First Name" aria-label="First Name" required>
+				   </div>
+				   <div class="col-sm-4">
+				   	  <label for="lastName" class="form-label">Last Name</label>
+				      <input id="lastName" type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" required>
+				   </div>
+				</div>
+				<div class="row">
+				   <div class="col-sm-5">
+				   	  <label for="emailAddress" class="form-label">Email Address</label>
+				      <input id="emailAddress" type="email" class="form-control" placeholder="example@domain.com" aria-label="Email address" required>
+				   </div>
+				</div>
+
+				<h4>Appointment Information</h4>
+				<div class="row">
+
+				   
+				</div>
+				<div class="row">
+				   <div class="col-sm-6">
+				   	  <label for="additionalInformation" class="form-label">Is there anything you would like to tell us before the appointment? (Optional)</label>
+				      <textarea class="form-control" placeholder="Add additional information here..." id="additionalInformation" style="height: 100px"></textarea>
+				   </div>
+				</div>
+
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+				  <label class="form-check-label" for="flexCheckChecked">
+				    I confirm that I am available at the selected date and time. I understand that if I must re-schedule or cancel the appointment, I must notify the clinic at least 12 hours beforehand.
+				  </label>
+				</div>
+
+				<br><br>
+
+				<button type="submit" class="submitBtn">Submit</button>
+
+		    </form>
 		</div>
 
 
