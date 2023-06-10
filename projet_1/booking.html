@@ -12,6 +12,12 @@
 		<link href="styles/style.css" rel="stylesheet" type="text/css">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 		<script src="scripts/script.js"></script>
+		<script>
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			  return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+		</script>
 	</head>
 
 	<body>
@@ -55,31 +61,79 @@
 		   		<h4>Personal Information</h4>
 		   		<div class="row">
 				   <div class="col-sm-4">
-				   	  <label for="firstName" class="form-label">First Name</label>
+				   	  <label for="firstName" class="form-label">First Name<span class="redAsterisk"> *</span></label>
 				      <input id="firstName" type="text" class="form-control" placeholder="First Name" aria-label="First Name" required>
 				   </div>
 				   <div class="col-sm-4">
-				   	  <label for="lastName" class="form-label">Last Name</label>
+				   	  <label for="lastName" class="form-label">Last Name<span class="redAsterisk"> *</span></label>
 				      <input id="lastName" type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" required>
 				   </div>
 				</div>
 				<div class="row">
 				   <div class="col-sm-5">
-				   	  <label for="emailAddress" class="form-label">Email Address</label>
+				   	  <label for="emailAddress" class="form-label">Email Address<span class="redAsterisk"> *</span></label>
 				      <input id="emailAddress" type="email" class="form-control" placeholder="example@domain.com" aria-label="Email address" required>
 				   </div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3">
+				   	  <label for="petName" class="form-label">Pet Name<span class="redAsterisk"> *</span></label>
+				      <input id="petName" type="text" class="form-control" placeholder="Pet Name" aria-label="Pet Name" required>
+				   </div>
+				</div>
+				<div class = "row">
+					<div class="col-sm-4">
+				   	  <label for="petSpecies" class="form-label">Pet Type<span class="redAsterisk"> *</span></label>
+				      <div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="type1">
+						  <label class="form-check-label" for="type1">
+						    Dog
+						  </label>
+					  </div>
+					  <div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="type1">
+						  <label class="form-check-label" for="type1">
+						    Cat
+						  </label>
+					  </div>
+					  <div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="type1">
+						  <label class="form-check-label" for="type1">
+						    Reptile
+						  </label>
+					  </div>
+					  <div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="type1">
+						  <label class="form-check-label" for="type1">
+						    Bird
+						  </label>
+					  </div>
+					  <div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="type1" >
+						  <label class="form-check-label" for="type1">
+						    Pocket Pet (e.g. Rabbit, Hamster, Ferret, etc.)
+						  </label>
+					  </div>
+					  <div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="type1">
+						  <label class="form-check-label" for="type1">
+						    Other (Please specify):
+						  </label>
+						  <input id="typeOther" type="text" class="form-control" aria-label="Other">
+					  </div>
+					</div>	
 				</div>
 
 				<h4>Appointment Information</h4>
 
-				<div class="row">
-					<div class="col-sm-3">
-				   	  <label for="apptDate" class="form-label">Date</label>
+				<div class="row" style="margin-bottom: 0px">
+					<div class="col-sm-2">
+				   	  <label for="apptDate" class="form-label">Date<span class="redAsterisk"> *</span></label>
 				      <input id="apptDate" type="date" class="form-control" placeholder="yyyy-mm-dd" aria-label="Date" required>
 				   </div>
 				   <div class="col-sm-3">
-				   	  <label for="apptTime" class="form-label">Time</label>
-				   	  <div id = "apptTime" class="input-group mb-3 ">
+				   	  <label for="apptTime" class="form-label">Time <span class="redAsterisk"> *</span></label>
+				   	  <div id = "apptTime" class="input-group mb-4 ">
 				   	  	  <select id="apptHour" class="form-select" required>
 				   	  	  	  <option disabled selected>hh</option>
 							  <option>9</option>
@@ -98,20 +152,48 @@
 							  <option>00</option>
 							  <option>30</option>
 						  </select>
-						  
+						  <span id="AMorPM"class="input-group-text"></span>					  
 					  </div>
 				   </div>
 				</div>
-
 				<div class="row">
 					<div class="col-sm-3">
-				   	  <label for="selectVet" class="form-label">Veterinarian</label>
-				      <select id="selectVet" class="form-select" placeholder="Select Veterinarian..." required>
+				   	  <label for="selectVet" class="form-label">Veterinarian <span class="redAsterisk">*</span></label>
+				      <select id="selectVet" class="form-select" style="max-width: 100%" required>
+				      		<option disabled selected>Select Veterinarian...</option>
 				      		<option>No preference</option>
 				      		<option>Vet 1</option>
 							<option>Vet 2</option>
 							<option>Vet 3</option>
 							<option>Vet 4</option>
+				      </select>
+				   </div>
+				   <div class="col-sm-4">
+				   	  <label for="selectService" class="form-label">Reason for Appointment <span class="redAsterisk">*</span></label>
+				      <select id="selectService" class="form-select" style="max-width: 100%" required>
+				      		<option disabled selected>Select Service...</option>
+				      		<option disabled>GENERAL</option>
+				      		<option>Checkup</option>
+							<option>Nutritional Counseling and Weight Management</option>
+							<option>Heartworm, Flea, and Tick Prevention</option>
+							<option disabled>----</option>
+							<option disabled>VACCINATION</option>
+							<option>Core Vaccines</option>
+							<option>Non-core Vaccines</option>
+							<option disabled>----</option>
+							<option disabled>DENTISTRY</option>
+							<option>Regular Cleaning</option>
+							<option>Dental Extraction</option>
+							<option disabled>----</option>
+							<option disabled>DIAGNOSTICS</option>
+							<option>Bloodwork and Urinanalysis</option>
+							<option>X-Ray</option>
+							<option>Ultrasound</option>
+							<option disabled>----</option>
+							<option disabled>SURGERY</option>
+							<option>Spaying and Neutering</option>
+							<option>Lumpectomy</option>
+							
 				      </select>
 				   </div>
 				</div>
@@ -123,7 +205,7 @@
 				</div>
 
 				<div class="form-check">
-				  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+				  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" required>
 				  <label class="form-check-label" for="flexCheckChecked">
 				    I confirm that I am available at the selected date and time. I understand that if I must re-schedule or cancel the appointment, I should notify the clinic as soon as possible.
 				  </label>
@@ -132,10 +214,13 @@
 				<br><br>
 
 				<button type="submit" class="submitBtn">Submit</button>
+				<br>
 
 		    </form>
 		</div>
-
+		
 
 	</body>
+
+
 </html>
