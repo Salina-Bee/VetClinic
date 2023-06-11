@@ -1,3 +1,25 @@
+.accordion-button:focus {
+	background-color: #e4cef0;
+	box-shadow: none;
+}
+
+.accordion-button.collapsed {
+	background: #e4cef0;
+	box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+	background-color: #e4cef0;
+}
+
+
+
+.accordion-item {
+	border-color: #e4cef0;
+
+}
+
+
 body {
 	font-family: 'Trebuchet MS', sans-serif;
 }
@@ -37,6 +59,11 @@ body {
 
 .card-title {
 	margin-top: 0px;
+}
+
+.carousel {
+	padding: 10px;
+	border:solid #341948;;
 }
 
 .collapsibleBtn {
@@ -132,6 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 	max-width: 35%;
 	max-height: 35%;
 	margin: 5px;
+	margin-left: 10px;
 	float: right;
 }
 
@@ -162,7 +190,7 @@ nav {
 }
 
 .row {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	max-height: fit-content;
 }
 
